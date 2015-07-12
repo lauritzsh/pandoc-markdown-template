@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+FILES=(                               \
+  dynamic/{ruby,python,javascript}.md \
+  static/{java,csharp}.md             \
+  functional/{haskell,fsharp}.md)
+
+pandoc                        \
+  --from         markdown     \
+  --to           latex        \
+  --template     template.tex \
+  --out          report.pdf   \
+  --latex-engine xelatex      \
+  "${FILES[@]}"
