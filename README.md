@@ -22,7 +22,3 @@ Edit this file for using other packages, settings etc.
 
 Lastly you want to remove the directories filled with Markdown files and write
 your own. Add the new files to `typeset` in the `FILES` array.
-
-**Pro tip:** use [brace
-expansion](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html) to
-write the directories only once like the sample input already defined.
