@@ -1,0 +1,7 @@
+dynamic/ruby.md
+dynamic/python.md
+dynamic/javascript.md
+static/java.md
+static/csharp.md
+functional/haskell.md
+functional/fsharp.md

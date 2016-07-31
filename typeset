@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-FILES=(                               \
-  dynamic/{ruby,python,javascript}.md \
-  static/{java,csharp}.md             \
-  functional/{haskell,fsharp}.md)
+FILES=($( cat index.txt ))
 
 pandoc                        \
   --from         markdown     \
