@@ -7,7 +7,7 @@ Be sure to have LaTeX ([Windows](http://miktex.org/), [OS
 X](https://tug.org/mactex/), [Linux](http://latex-project.org/)) and Pandoc
 installed.
 
-Pandoc can be installed with Homebrew: `brew install pandoc`.
+On OS X, Pandoc can be installed with Homebrew: `brew install pandoc`.
 
 ## Typeset
 For now there is a simple Bash script to typeset the document. To typeset it,
