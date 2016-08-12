@@ -21,4 +21,4 @@ The `template.tex` file work as a template for LaTeX and preamble for LaTeX.
 Edit this file for using other packages, settings etc.
 
 Lastly you want to remove the directories filled with Markdown files and write
-your own. Add the new files to `typeset` in the `FILES` array.
+your own. Add the new files to the `index.txt` file.
