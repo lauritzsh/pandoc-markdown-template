@@ -1,18 +1,18 @@
 \chapter{Dynamic languages}
 
-# Ruby
+## Ruby
 Ruby is a dynamic, reflective, object-oriented, general-purpose programming
 language.
 
-## Code examples
+### Code examples
 
-### Hello World
+#### Hello World
 
 ```ruby
 puts "Hello World!"
 ```
 
-### String interpolation
+#### String interpolation
 
 ```ruby
 var = 3.14159

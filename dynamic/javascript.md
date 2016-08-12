@@ -1,4 +1,4 @@
-# JavaScript
+## JavaScript
 JavaScript, also known as ECMAScript (the untrademarked name used for the
 standard), is a dynamic programming language.
 
