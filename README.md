@@ -1,24 +1,20 @@
-# Markdown template for reports
-A simple template for writing reports in [Markdown](http://commonmark.org/)
-using [Pandoc](http://pandoc.org/) for school/college/university/whatever.
+# Pandoc Markdown template
+This repository is a small collection of personal Markdown templates for Pandoc.
+
+Each directory contains a working template and example PDF output.
 
 ## Requirements
-Be sure to have LaTeX ([Windows](http://miktex.org/), [OS
-X](https://tug.org/mactex/), [Linux](http://latex-project.org/)) and Pandoc
-installed.
+Be sure to have LaTeX ([Windows](http://miktex.org/), [OS X](https://tug.org/mactex/),
+[Linux](http://latex-project.org/)) and Pandoc installed.
 
-On OS X, Pandoc can be installed with Homebrew: `brew install pandoc`.
+On macOS, Pandoc can be installed with Homebrew: `brew install pandoc`.
 
-## Typeset
-For now there is a simple Bash script to typeset the document. To typeset it,
-make sure `typeset` is executable (should be) and type `./typeset`. It will be
-exported as `report.pdf` in the root folder.
+For typesetting you can either use the `Makefile`s with `make` or just use `pandoc`.
 
-## Replacing sample data
-Edit the `cover.tex` file with the name of students and supervisor(s).
+For the `report-bib` you will need `pandoc-citeproc` too. On macOS that is easily installed with
+`brew install pandoc-citeproc`.
 
-The `template.tex` file work as a template for LaTeX and preamble for LaTeX.
-Edit this file for using other packages, settings etc.
-
-Lastly you want to remove the directories filled with Markdown files and write
-your own. Add the new files to the `index.txt` file.
+## Customization
+If you want to see what Pandoc allows for customization you can use `pandoc -D latex` to get the
+default LaTeX template. You can set variables with `-V/--variable` when using `pandoc` or preferably
+put them into a [YAML front matter](http://assemble.io/docs/YAML-front-matter.html).

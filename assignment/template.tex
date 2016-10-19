@@ -4,7 +4,7 @@
 % -----------------
 % START OF PREAMBLE
 % -----------------
-\documentclass[12pt,a4paper]{scrreprt}
+\documentclass[12pt,a4paper]{scrartcl}
 
 
 % Commands
@@ -12,16 +12,17 @@
 
 
 % Packages
+\usepackage{fontspec}
 \usepackage{eurosym}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{upquote}
 \usepackage{microtype}
-\usepackage{polyglossia}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx}
 \usepackage{grffile}
 \usepackage[normalem]{ulem}
+\usepackage{fancyhdr}
 \usepackage[setpagesize=false,
             unicode=false,
             colorlinks=true,
@@ -29,20 +30,14 @@
             linkcolor=black]{hyperref}
 
 
-% Polyglossia settings
-\setmainlanguage{english} % or danish
-\addto\captionsenglish{%
-  \renewcommand{\contentsname}{Table of Contents}
-}
-\addto\captionsdanish{%
-  \renewcommand{\contentsname}{Indholdsfortegnelse}
-}
+% Fancy headers and footers settings
+\pagestyle{fancy}
+\lhead{$left-header$}
+\rhead{$right-header$}
 
 
 % Required for syntax highlighting
-$if(highlighting-macros)$
-  $highlighting-macros$
-$endif$
+$highlighting-macros$
 
 
 % Don't let images overflow the page
@@ -55,9 +50,7 @@ $endif$
 
 
 % Make links footnotes instead of hotlinks
-$if(links-as-notes)$
-  \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
-$endif$
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 
 
 % Avoid problems with \sout in headers with hyperref:
@@ -71,17 +64,25 @@ $endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 
 
+% No section numbering
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+
 % -----------------
 %  END OF PREAMBLE
 % -----------------
 \begin{document}
 
-\input{cover}
-
-% chapter: 0, section: 1, subsection: 2 etc
-\setcounter{secnumdepth}{1}
-\setcounter{tocdepth}{1}
-\tableofcontents
+\begin{center}
+  \hfill \break%
+  $if(title)$\Huge{$title$}\\[0.5em]$endif$
+  $if(authors)$\Large{$authors$}\\[2.5em]$endif$
+\end{center}
 
 $body$
 
