@@ -30,6 +30,8 @@
             linkcolor=black]{hyperref}
 
 
+% Required fix for fancyhdr
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
 % Fancy headers and footers settings
 \pagestyle{fancy}
 \lhead{$left-header$}
