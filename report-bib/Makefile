@@ -8,7 +8,7 @@ typeset:
 	  --to           latex          \
 	  --template     template.tex   \
 	  --out          report-bib.pdf \
-	  --latex-engine xelatex        \
+	  --pdf-engine   xelatex        \
 	  --bibliography biblio.bib     \
 	  --csl style.csl               \
 	  $(FILES)
