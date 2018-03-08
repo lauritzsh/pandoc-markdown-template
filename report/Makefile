@@ -8,5 +8,5 @@ typeset:
 	  --to           latex        \
 	  --template     template.tex \
 	  --out          report.pdf   \
-	  --latex-engine xelatex      \
+	  --pdf-engine   xelatex      \
 	  $(FILES)
