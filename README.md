@@ -4,7 +4,7 @@ This repository is a small collection of personal Markdown templates for Pandoc.
 Each directory contains a working template and example PDF output.
 
 ## Requirements
-Be sure to have LaTeX ([Windows](http://miktex.org/), [OS X](https://tug.org/mactex/),
+Be sure to have LaTeX ([Windows](http://miktex.org/), [macOS](https://tug.org/mactex/),
 [Linux](http://latex-project.org/)) and Pandoc installed.
 
 On macOS, Pandoc can be installed with Homebrew: `brew install pandoc`.
