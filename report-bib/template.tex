@@ -68,14 +68,15 @@ $highlighting-macros$
 \setlength{\emergencystretch}{3em} % Prevent overfull lines
 
 % adaptation to the upgrade of Pandoc, otherwise error would occur.
+% Fix per https://stackoverflow.com/a/67244130
 $if(csl-refs)$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
+\newenvironment{CSLReferences}%
   {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
   {\par}
-$endif$
+$endif$ 
 
 % -----------------
 %  END OF PREAMBLE
