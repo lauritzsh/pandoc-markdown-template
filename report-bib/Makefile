@@ -11,4 +11,5 @@ typeset:
 	  --pdf-engine   xelatex        \
 	  --bibliography biblio.bib     \
 	  --csl style.csl               \
+	  --citeproc					\
 	  $(FILES)
